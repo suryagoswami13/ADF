@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "projectadf-dev"
+		},
+		"ADLSsink_properties_typeProperties_url": {
+			"value": "https://projectdatalakedev.dfs.core.windows.net/"
+		},
+		"ADLSsink_properties_typeProperties_tenant": {
+			"value": "0f374247-afae-41ae-9934-268e5a3e8046"
+		},
+		"ADLSsink_properties_typeProperties_servicePrincipalId": {
+			"value": "3f6a7dd9-a018-44e2-a085-7be07ee3e43a"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://projectdatalakesource.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_tenant": {
+			"value": "0f374247-afae-41ae-9934-268e5a3e8046"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_servicePrincipalId": {
+			"value": "3f6a7dd9-a018-44e2-a085-7be07ee3e43a"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://projectkeyvault-dev.vault.azure.net/"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_server": {
+			"value": "project-source.database.windows.net"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_database": {
+			"value": "projectsource"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_userName": {
+			"value": "project-source"
+		}
+	}
+}
