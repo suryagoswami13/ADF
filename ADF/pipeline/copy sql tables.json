@@ -30,7 +30,8 @@
 						"referenceName": "Json_source_info",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Table_Source_SQL.json"
+							"filename": "Table_Source_SQL.json",
+							"container": "manualfiles"
 						}
 					},
 					"firstRowOnly": false
