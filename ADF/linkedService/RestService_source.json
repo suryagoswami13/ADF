@@ -1,0 +1,12 @@
+{
+	"name": "RestService_source",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://airlabs.co/api/v9/airlines",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
