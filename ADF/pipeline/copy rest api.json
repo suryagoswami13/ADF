@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Web1",
+				"name": "Web_keyvault",
 				"type": "WebActivity",
 				"dependsOn": [],
 				"policy": {
@@ -28,7 +28,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Web1",
+						"activity": "Web_keyvault",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -58,7 +58,21 @@
 							"type": "JsonWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['response']"
+								},
+								"sink": {
+									"path": "$['response']"
+								}
+							}
+						],
+						"collectionReference": ""
+					}
 				},
 				"inputs": [
 					{
@@ -66,7 +80,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"url": {
-								"value": "@activity('Web1').output.value",
+								"value": "@activity('Web_keyvault').output.value",
 								"type": "Expression"
 							}
 						}
@@ -78,7 +92,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"filename": {
-								"value": "@concat('airlines/Date_Part=',formatDateTime(utcNow(),'yyyy-mm-dd'),'airlines.json')",
+								"value": "@concat('airlines/Date_Part=',formatDateTime(utcNow(),'yyyy-mm-dd'),'/airlines.json')",
 								"type": "Expression"
 							},
 							"container": "raw"
