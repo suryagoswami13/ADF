@@ -15,7 +15,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@concat(item().tablename_source,'\\Date_Part=',formatDateTime(utcNow(),'yyyy-mm-dd'))",
+					"value": "@concat(split(item().filename_sink,'.')[0],'\\Date_Part=',formatDateTime(utcNow(),'yyyy-mm-dd'))",
 					"type": "Expression"
 				},
 				"fileSystem": "raw"
