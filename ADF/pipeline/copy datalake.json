@@ -30,7 +30,8 @@
 						"referenceName": "Json_source_info",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Table_Source_Datalake.json"
+							"filename": "Table_Source_Datalake.json",
+							"container": "manualfiles"
 						}
 					},
 					"firstRowOnly": false
